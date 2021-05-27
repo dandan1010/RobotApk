@@ -542,10 +542,10 @@ public class CheckLztekLamp {
                         Content.noChargingCount = 0;
                     }
 
-//                    if (!Content.isCharging && Content.charging_gpio == 0 && Content.chargingState != 2 && Content.hasGpioCount > 5) {
-//                        setChargingGpio(0);
-//                        Content.chargingState = 2;
-//                    }
+                    if (!Content.isCharging && Content.charging_gpio == 0 && Content.chargingState != 2) {
+                        setChargingGpio(0);
+                        Content.chargingState = 2;
+                    }
 
                     Log.d("zdzd555 : ", "noChargingCount : " + Content.noChargingCount);
                     if (!editText.getText().toString().substring(12, 14).startsWith("F")) {
